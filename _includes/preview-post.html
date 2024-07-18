@@ -10,18 +10,14 @@
         background-size: cover;
         background-position: center;
         padding: 1px;
-        color: white
-    }
+        color: white;
 
-    .post-identifier {
-        text-align: left;
+        position: relative;
     }
 </style>
 
 <div class="post-preview" id="{{include.post.slug}}">
-    <div class="post-identifier">
-        {{ include.post.date | split: ' ' | first | replace: '-', '' }} {{ include.post.tags | join: ', ' }}
-    </div>
+    {% include post-identifier.html post=post %}
     <div>
         <p>{{ include.post.title }}</p>
         <p>{{ include.post.content | markdownify }}</p>

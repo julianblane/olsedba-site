@@ -1,0 +1,21 @@
+<style>
+    .post-identifier {
+        text-align: left;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-image: linear-gradient(45deg, var(--sky-colour), transparent)
+    }
+
+    .post-identifier-date {
+        font-size: 1.5em;   
+    }
+</style>
+
+<!-- TODO: parametrize whether to show tags -->
+<div class="post-identifier">
+    {{ include.post.tags | join: ', ' }}
+    <div class="post-identifier-date">
+        {{ include.post.date | split: ' ' | first | replace: '-', '' }}
+    </div>
+</div>
