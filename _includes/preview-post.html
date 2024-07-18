@@ -1,6 +1,6 @@
 <style>
     #{{ include.post.slug }} {
-        background-image: url("/assets/posts/{{ include.post.date | split: ' ' | first }}-{{ include.post.slug }}.jpeg");
+        background-image: url("{{ site.baseurl }}/assets/posts/{{ include.post.date | split: ' ' | first }}-{{ include.post.slug }}.jpeg");
     }
 
     .post-preview {
