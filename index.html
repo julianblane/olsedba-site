@@ -1,0 +1,52 @@
+---
+---
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-template-rows: auto auto auto auto;
+            gap: .5em;
+            background-color: #999;
+            padding: .5em;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            font-size: 30px;
+            overflow: hidden;
+        }
+
+        .grid-container>.square {
+            grid-column: span 2;
+            grid-row: span 2;
+            aspect-ratio: 1;
+        }
+
+        .grid-container>.vertical {
+            grid-column: span 1;
+            grid-row: span 2;
+            /* aspect-ratio: 1/2; */
+        }
+    </style>
+</head>
+
+<body>
+    {% assign devlog = site.tags.devlog | first %}
+    {% assign devshort = site.tags.devshort | first %}
+    {% assign artshort = site.tags.artshort | first %}
+
+    {% assign posts = "" | split: ',' %}
+    {% assign posts = posts | push: devlog %}
+    {% assign posts = posts | push: devshort %}
+    {% assign posts = posts | push: artshort %}
+    
+    {% include gallery.html posts=posts %}
+</body>
+
+</html>
