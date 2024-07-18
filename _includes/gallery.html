@@ -1,13 +1,11 @@
----
----
 <style>
   .grid-container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     /* grid-template-rows: auto auto auto auto; */
     gap: .5em;
-    background-color: #999;
-    padding: .5em;
+    /* background-color: #999; */
+    /* padding: .5em; */
   }
 
   .grid-container>div {

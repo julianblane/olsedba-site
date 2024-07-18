@@ -1,0 +1,265 @@
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+:root {
+    --stage-height: calc(var(--front-cube-height) + var(--front-cube-top-margin) + var(--sky-edge-height));
+
+    --front-cube-width: min(42em, 55vw);
+    --front-cube-height: clamp(20em, 42em, var(--front-cube-width));
+    --front-cube-top-margin: 7vw;
+    --front-cube-stickout: 9vw;
+    --front-cube-offset: calc((50vw - var(--sky-edge-width)) / 4.5);
+
+    --sky-edge-height: clamp(5vw, 9em, 7vw);
+    --sky-edge-width: max(5vw, calc(50vw - var(--front-cube-width)));
+
+    --sky-colour-fade-up: blue;
+
+    --sky-colour-hue: 217deg;
+    --sky-colour: hsl(var(--sky-colour-hue) 60% 72%);
+    --sky-colour-right-facing: hsl(var(--sky-colour-hue) 59% 65%);
+    --sky-colour-left-facing: hsl(var(--sky-colour-hue) 66% 77%);
+    --sky-colour-bottom-facing: hsl(var(--sky-colour-hue) 50% 55%);
+}
+
+wrapper {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-family: "Coda";
+}
+
+body {
+    margin: 0;
+    background-color: var(--sky-colour);
+}
+
+/* pieces-of-the-sky */
+.stage {
+    width: 100%;
+    height: var(--stage-height);
+
+    -webkit-perspective: 4269px;
+    -webkit-perspective-origin: 50% 150%;
+
+    background-color: var(--sky-colour);
+    background-image: linear-gradient(var(--sky-colour-right-facing), transparent);
+}
+
+face {
+    display: block;
+    position: absolute;
+}
+
+mesh {
+    -webkit-transform-style: preserve-3d;
+    position: absolute;
+}
+
+.cube {
+    -webkit-transform: translateX(calc(50vw - var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(30deg) translateY(var(--front-cube-top-margin));
+    -webkit-transform-origin: 0 0;
+}
+
+.cube-face {
+    width: var(--front-cube-width);
+    height: var(--front-cube-height);
+
+    /*-webkit-transform-origin: 50% 50% 0;*/
+}
+
+.cube-face.right {
+    background-color: var(--sky-colour);
+}
+
+.cube-face.front {
+    background-color: var(--sky-colour-left-facing);
+
+    -webkit-transform-origin: 100%;
+    -webkit-transform: translateX(calc(var(--front-cube-width) * -1)) rotateY(270deg);
+}
+
+.cube-face.bottom {
+    background-color: var(--sky-colour-bottom-facing);
+
+    height: var(--front-cube-width);
+
+    -webkit-transform-origin: 0 0 0;
+    -webkit-transform: rotateX(-90deg) translateZ(calc(var(--front-cube-height)));
+}
+
+/* sky-fade */
+.background-gradient-sky-top {
+    background-image: linear-gradient(var(--sky-colour-fade-up), transparent);
+}
+
+/* sky-content */
+.absolute-bottom-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: 0.5em 1em;
+}
+
+.absolute-bottom-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 0.5em 1em;
+}
+
+.h1-no-margin {
+    font-size: calc(var(--front-cube-width) * .3);
+    line-height: .9em;
+    font-weight: bolder;
+}
+
+.h2-no-margin {
+    font-size: min(5em, calc(var(--front-cube-width) * .16));
+    line-height: 1.5em;
+}
+
+@media screen and (min-width: 1200px) {
+    .h2-no-margin {
+        line-height: .9em;
+    }
+}
+
+a {
+    color: var(--sky-colour-bottom-facing);
+    text-decoration: none;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.text-align-right {
+    text-align: right;
+}
+
+/* worlds-edge */
+
+.sky-edge {
+    -webkit-transform-style: preserve-3d;
+    -webkit-transform: translateY(calc(var(--front-cube-top-margin) + var(--front-cube-height)));
+}
+
+.sky-edge > .right {
+    -webkit-transform: translateX(calc(100vw - var(--sky-edge-width))) translateY(calc(var(--front-cube-height) * -1));
+}
+
+.sky-edge > .left {
+    -webkit-transform: translateX(var(--sky-edge-width)) translateY(calc(var(--front-cube-height) * -1));
+}
+
+.sky-edge > face {
+    height: var(--sky-edge-height);
+    width: 100vw;
+    background-color: var(--sky-colour);
+}
+
+.sky-edge > mesh > face {
+    height: var(--front-cube-height);
+}
+
+.sky-edge > mesh > .side {
+    width: var(--front-cube-width);
+    background-color: var(--sky-colour-left-facing);
+    -webkit-transform: rotateY(90deg);
+    -webkit-transform-origin: 0 0;
+}
+
+.sky-edge > mesh > .front {
+    width: var(--sky-edge-width);
+    background-color: var(--sky-colour);
+}
+
+.sky-edge > .left > .front {
+    -webkit-transform: translateX(calc(var(--sky-edge-width) * -1));
+}
+
+.sky-edge > .left > .side {
+    background-color: var(--sky-colour-right-facing);
+}
+
+/* content */
+.content {
+    font-size: 2em;
+    padding: 0 1em;
+
+    color: ghostwhite;
+}
+
+@media screen and (min-width: 1200px) {
+    .content {
+        font-size: 1.5em;
+        max-width: 55em;
+        margin: auto;
+    }
+}
+
+footer {
+    width: 100%;
+
+    background-image: linear-gradient(transparent, var(--sky-colour-left-facing));
+    color: var(--sky-colour-bottom-facing);
+
+    padding-top: 4em;
+    padding-bottom: 2em;
+
+    place-content: center;
+    display: flex;
+
+    font-size: 1.5em;
+
+    margin-top: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+        font-size: 1.25em;
+    }
+}
+
+footer > div {
+    display: flex;
+    align-self: center;
+}
+
+.author {
+    padding-inline: 1em;
+}
+
+.links > a {
+    padding-inline: 0.5em;
+    align-self: center;
+}
+
+.links > a > img {
+    max-height: 2em;
+}
+
+/* markup */
+.h {
+    margin: 0 0;
+    text-transform: uppercase;
+
+    color: ghostwhite !important;
+}
+
+h1, h2 {
+    color: var(--sky-colour-bottom-facing);
+}
+
+h3 > em {
+    color: var(--sky-colour-right-facing);
+}
+
+blockquote {
+    color: var(--sky-colour-bottom-facing);
+}
