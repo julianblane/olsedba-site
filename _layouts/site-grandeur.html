@@ -21,7 +21,7 @@
                 <face class="cube-face bottom"></face>
                 <face class="cube-face front">
                     <div class="absolute-bottom-left">
-                        <h1 class="h h1-no-margin button" data-href="#bio">JULIAN BLANE</h1>
+                        <h1 class="h h1-no-margin button" onclick="location.href='{{site.baseurl}}/'">JULIAN BLANE</h1>
                     </div>
                 </face>
                 <face class="cube-face right">
@@ -47,7 +47,7 @@
             </div>
         </div>
         <div class="content">
-            {{ content }}
+            {{ content | markdownify }}
         </div>
         <footer>
             <div class="author">

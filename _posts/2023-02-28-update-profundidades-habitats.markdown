@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: devlog
 title:  "Habitats"
 date:   2023-02-28
 tags: devlog profundidades

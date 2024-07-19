@@ -14,11 +14,24 @@
 
         position: relative;
     }
+
+    .post-preview-body {
+        cursor: pointer;
+        height: 100%;
+    }
+
+    .post-preview-link {
+        position: absolute;
+        cursor: pointer;
+        height: 100%;
+        width: 100%;
+    }
 </style>
 
 <div class="post-preview" id="{{include.post.slug}}">
+    <div class="post-preview-link" onclick="location.href='{{site.baseurl}}{{include.post.url}}'"></div>
     {% include post-identifier.html post=post %}
-    <div>
+    <div class="post-preview-body">
         <p>{{ include.post.title }}</p>
         <p>{{ include.post.content | markdownify }}</p>
     </div>
