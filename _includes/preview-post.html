@@ -2,37 +2,15 @@
     #{{ include.post.slug }} {
         background-image: url("{{ site.baseurl }}/assets/posts/{{ include.post.date | split: ' ' | first }}-{{ include.post.slug }}.jpeg");
     }
-
-    /* move to common css */
-    .post-preview {
-        width: 100%;
-        height: 100%;
-        background-size: cover;
-        background-position: center;
-        padding: 1px;
-        color: white;
-
-        position: relative;
-    }
-
-    .post-preview-body {
-        cursor: pointer;
-        height: 100%;
-    }
-
-    .post-preview-link {
-        position: absolute;
-        cursor: pointer;
-        height: 100%;
-        width: 100%;
-    }
 </style>
 
 <div class="post-preview" id="{{include.post.slug}}">
-    <div class="post-preview-link" onclick="location.href='{{site.baseurl}}{{include.post.url}}'"></div>
-    {% include post-identifier.html post=post %}
+    <div class="post-preview-fade"></div>
     <div class="post-preview-body">
-        <p>{{ include.post.title }}</p>
+        <h2>{{ include.post.title }}</h2>
         <p>{{ include.post.excerpt | markdownify }}</p>
     </div>
+    <!-- TODO: play button para shorts -->
+    <div class="post-preview-link" onclick="location.href='{{site.baseurl}}{{include.post.url}}'"></div>
+    {% include post-identifier.html post=post %}
 </div>

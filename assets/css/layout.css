@@ -1,0 +1,51 @@
+/* move to common css */
+.post-preview {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    color: white;
+
+    position: relative;
+}
+
+.post-preview-link {
+    position: absolute;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
+
+.post-preview-link, .post-preview-fade, .post-preview-body {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0
+}
+
+.post-preview-body {
+    padding: 1em;
+    width: auto;
+    height: 100%;
+}
+.post-preview-body>h2 {
+    color: white;
+}
+
+
+.post-preview-fade {
+    background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.post-identifier {
+    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-image: linear-gradient(45deg, var(--sky-colour), transparent);
+    padding: .5em;
+}
+
+.post-identifier-date {
+    font-size: 1.5em;   
+}

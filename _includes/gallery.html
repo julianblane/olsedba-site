@@ -33,13 +33,13 @@
     {% for post in include.posts %}
       {% if post.tags contains "devlog" %}
       <div class="square">
-        {% include preview-post.html post=post %}
-      </div>
       {% elsif post.tags contains "devshort" or post.tags contains "artshort" %}
       <div class="vertical">
-        {% include preview-short.html post=post %}
-      </div>
+      {% else %}
+      <div>
       {% endif %}
+      {% include preview-post.html post=post %}
+      </div>
     {% endfor %}
   </div>
 </div>
