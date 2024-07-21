@@ -1,0 +1,21 @@
+<style>
+    .embed-container iframe {
+        width: 100%;
+        max-height: 100vh;
+    }
+
+    .embed-container-vertical iframe {
+        aspect-ratio: 9 / 16;
+    }
+    .embed-container-horizontal iframe {
+        aspect-ratio: 16 / 9;
+    }
+</style>
+
+<div class="embed-container embed-container-{{ include.aspect }}">
+    <iframe
+        src="https://www.youtube.com/embed/{{ include.id }}"
+        frameborder="0"
+        allowfullscreen="true">
+    </iframe>
+</div>

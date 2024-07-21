@@ -190,15 +190,16 @@ a {
 /* content */
 .content {
     font-size: 2em;
-    padding: 0 1em;
+    padding: 0 var(--sky-edge-width);
 
     color: ghostwhite;
+    /* align-self: center; */
 }
 
 @media screen and (min-width: 1200px) {
     .content {
         font-size: 1.5em;
-        max-width: 55em;
+        width: 55em;
         margin: auto;
     }
 }

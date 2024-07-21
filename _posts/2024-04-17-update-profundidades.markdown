@@ -4,6 +4,6 @@ title:  "Pulpo dumbo"
 date:   2024-04-17
 tags: devlog profundidades
 ---
-Un pulpo dumbo
+{% include embed-youtube.html id="OukPaMJRzDY" aspect="horizontal" %}
 
-{% include youtube-player.html id="OukPaMJRzDY" %}
+Agregue un pulpo dumbo.

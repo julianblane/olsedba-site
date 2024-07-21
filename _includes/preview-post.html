@@ -33,6 +33,6 @@
     {% include post-identifier.html post=post %}
     <div class="post-preview-body">
         <p>{{ include.post.title }}</p>
-        <p>{{ include.post.content | markdownify }}</p>
+        <p>{{ include.post.excerpt | markdownify }}</p>
     </div>
 </div>
