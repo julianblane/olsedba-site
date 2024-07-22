@@ -2,7 +2,7 @@
 layout: devlog
 title:  "Pulpo dumbo"
 date:   2024-04-17
-tags: devlog profundidades
+tags: devlog
 excerpt_separator: <!-- preview -->
 ---
 

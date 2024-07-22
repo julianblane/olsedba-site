@@ -1,6 +1,6 @@
 <!-- TODO: parametrize whether to show tags -->
 <div class="post-identifier">
-    {{ include.post.tags | join: ', ' }}
+    {{ include.post.categories | last | upcase }} {{ include.post.tags | join: ' ' }}
     <div class="post-identifier-date">
         {{ include.post.date | split: ' ' | first | replace: '-', '' }}
     </div>
