@@ -31,7 +31,7 @@
 <div class="gallery">
   <div class="grid-container">
     {% for post in include.posts %}
-      {% if post.tags contains "devlog" %}
+      {% if post.tags contains "devlog" or post.tags contains "release" %}
       <div class="square">
       {% elsif post.tags contains "devshort" or post.tags contains "artshort" %}
       <div class="vertical">

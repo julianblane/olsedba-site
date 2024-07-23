@@ -5,10 +5,12 @@ layout: site-grandeur
 {% assign devlog = site.tags.devlog | first %}
 {% assign devshort = site.tags.devshort | first %}
 {% assign artshort = site.tags.artshort | first %}
+{% assign release = site.tags.release | first %}
 
 {% assign posts = "" | split: ',' %}
 {% assign posts = posts | push: devlog %}
 {% assign posts = posts | push: devshort %}
 {% assign posts = posts | push: artshort %}
+{% assign posts = posts | push: release %}
 
 {% include gallery.html posts=posts %}

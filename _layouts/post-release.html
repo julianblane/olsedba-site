@@ -1,0 +1,21 @@
+---
+layout: site-grandeur
+---
+
+<style>
+    #{{ page.slug }} {
+        background-image: url("{{ site.baseurl }}/assets/posts/{{ page.date | split: ' ' | first }}-{{ page.slug }}.jpeg");
+    }
+</style>
+
+<h1>{{ page.title }}</h1>
+
+{% if page.itchio %}
+<div class="itchio" id="{{page.slug}}"> 
+    <a href="https://julianblane.itch.io/{{ page.itchio }}" class="button">Play on Itch.io</a>
+</div>
+{% endif %}
+
+<p>
+    {{ page.content || markdownify }}
+</p>
