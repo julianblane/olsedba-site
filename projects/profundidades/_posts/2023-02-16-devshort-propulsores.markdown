@@ -1,7 +1,6 @@
 ---
-layout: short
+layout: post-short
 title:  "propulsores"
-date:   2023-02-16
 tags: devshort
 username: julianblane
 tiktok: 7200860541001420038

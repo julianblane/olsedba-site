@@ -1,7 +1,7 @@
 ---
 layout: post-release
 tags: release
-title: 0.1.0
+title: 0.1.0 initial gameplay loop
 itchio: olsedba
 ---
 

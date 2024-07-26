@@ -1,7 +1,6 @@
 ---
-layout: devlog
+layout: post-devlog
 title:  "Habitats"
-date:   2023-02-28
 tags: devlog
 ---
 - Primer prototipo de habitats, spawnean criaturas cuando el submarino esta cerca.

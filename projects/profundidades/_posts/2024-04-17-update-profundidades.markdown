@@ -1,7 +1,6 @@
 ---
-layout: devlog
+layout: post-devlog
 title:  "Pulpo dumbo"
-date:   2024-04-17
 tags: devlog
 excerpt_separator: <!-- preview -->
 ---

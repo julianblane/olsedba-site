@@ -1,21 +1,3 @@
-<style>
-    .post-navigator {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 1em;
-    }
-
-    .next-link, .previous-link {
-        width: 50%;
-    }
-    .next-link {
-        text-align: left;
-    }
-    .previous-link {
-        text-align: right;
-    }
-</style>
-
 <div class="post-navigator">
     <div class="next-link">
     {% if include.post.next_tags != nil %}

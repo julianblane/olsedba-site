@@ -1,7 +1,6 @@
 ---
-layout: short
+layout: post-short
 title:  "ambientacion"
-date:   2023-10-05
 tags: devshort
 username: julianblane
 tiktok: none

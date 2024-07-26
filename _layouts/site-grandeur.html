@@ -5,9 +5,6 @@
 <head>
     <title>Julian Blane</title>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coda">
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/grandeur.css">
     <!-- todo: mover a file propio -->
@@ -17,49 +14,47 @@
 </head>
 
 <body>
-    <wrapper>
-        <div class="stage">
-            <mesh class="cube">
-                <face class="cube-face bottom"></face>
-                <face class="cube-face front">
-                    <div class="absolute-bottom-left">
-                        <h1 class="h h1-no-margin button" onclick="location.href='{{site.baseurl}}/'">JULIAN BLANE</h1>
-                    </div>
-                </face>
-                <face class="cube-face right">
-                    <div class="absolute-bottom-right text-align-right">
-                        <p class="h h2-no-margin button"
-                            data-href=#todo >TODO: titles</p>
-                    </div>
-                </face>
+    <div class="stage">
+        <mesh class="cube">
+            <face class="cube-face bottom"></face>
+            <face class="cube-face front">
+                <div class="absolute-bottom-left">
+                    <h1 class="h h1-no-margin button" onclick="location.href='{{site.baseurl}}/'">JULIAN BLANE</h1>
+                </div>
+            </face>
+            <face class="cube-face right">
+                <div class="absolute-bottom-right text-align-right">
+                    <p class="h h2-no-margin button"
+                        data-href=#todo >TODO: titles</p>
+                </div>
+            </face>
+        </mesh>
+
+        <div class="sky-edge">
+            <mesh class="right">
+                <face class="side"></face>
+                <face class="front"></face>
             </mesh>
 
-            <div class="sky-edge">
-                <mesh class="right">
-                    <face class="side"></face>
-                    <face class="front"></face>
-                </mesh>
+            <mesh class="left">
+                <face class="side"></face>
+                <face class="front"></face>
+            </mesh>
 
-                <mesh class="left">
-                    <face class="side"></face>
-                    <face class="front"></face>
-                </mesh>
-
-                <face></face>
-            </div>
+            <face></face>
         </div>
-        <div class="content">
-            {{ content | markdownify }}
+    </div>
+    <div class="content">
+        {{ content | markdownify }}
+    </div>
+    <footer>
+        <div class="author">
+            2024 Julián Benegas Lane
         </div>
-        <footer>
-            <div class="author">
-                2024 Julián Benegas Lane
-            </div>
-            <div class="links">
-                <!-- TODO: links -->
-            </div>
-        </footer>
-    </wrapper>
+        <div class="links">
+            <!-- TODO: links -->
+        </div>
+    </footer>
 </body>
 
 </html>

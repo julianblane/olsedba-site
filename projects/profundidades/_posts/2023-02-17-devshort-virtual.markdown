@@ -1,7 +1,6 @@
 ---
-layout: short
+layout: post-short
 title:  "submarino virtual"
-date:   2023-02-17
 tags: devshort
 username: julianblane
 tiktok: 7213910025612381445

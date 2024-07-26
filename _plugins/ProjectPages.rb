@@ -23,6 +23,7 @@ module Jekyll
   
         # Initialize data hash with a key pointing to all posts under current category.
         @data = {
+          'title' => category,
           'posts' => posts
         }
   

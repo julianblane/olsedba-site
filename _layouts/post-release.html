@@ -1,5 +1,5 @@
 ---
-layout: site-grandeur
+layout: post-base
 ---
 
 <style>
@@ -8,14 +8,12 @@ layout: site-grandeur
     }
 </style>
 
-<h1>{{ page.title }}</h1>
-
-{% if page.itchio %}
-<div class="itchio" id="{{page.slug}}"> 
+<div>
+    <div class="itchio" id="{{page.slug}}"> 
+    {% if page.itchio %}
     <a href="https://julianblane.itch.io/{{ page.itchio }}" class="button">Play on Itch.io</a>
-</div>
-{% endif %}
+    {% endif %}
+    </div>
 
-<p>
-    {{ page.content || markdownify }}
-</p>
+    <p>{{ page.content }}</p>
+</div>

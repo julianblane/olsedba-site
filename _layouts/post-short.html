@@ -1,8 +1,6 @@
 ---
-layout: site-grandeur
+layout: post-base
 ---
-
-<h1>{{ page.title }}</h1>
 
 {% if page.short %}
 {% include embed-youtube.html id=page.short aspect="vertical" %} 
@@ -23,5 +21,3 @@ Ver mas en:
 {% if page.tiktok %}
     tiktok
 {% endif %}
-
-{% include post-navigator.html post=page %}
