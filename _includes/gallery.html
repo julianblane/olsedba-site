@@ -8,7 +8,12 @@
       {% else %}
       <div>
       {% endif %}
-      {% include preview-post.html post=post %}
+      {% if post.tags contains "devshort" or post.tags contains "artshort" %}
+      {% assign video = true %}
+      {% else %}
+      {% assign video = false %}
+      {% endif %}
+      {% include preview-post.html post=post video=video %}
       </div>
     {% endfor %}
   </div>

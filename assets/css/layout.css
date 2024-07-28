@@ -34,9 +34,15 @@
     color: white;
 }
 
-
 .post-preview-fade {
     background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.5));
+}
+
+.post-preview-icon {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
 }
 
 .post-identifier {
@@ -50,7 +56,13 @@
 }
 
 .post-identifier-date {
-    /* font-size: 1.5em; */
+    font-size: 1.5em;
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--sky-colour-bottom-facing);
 }
 
 .itchio {
@@ -106,7 +118,8 @@
 
 .embed-container iframe {
     width: 100%;
-    /* max-height: 100vh; */
+    /* TODO: restar titulo? */
+    max-height: 100vh;
 }
 
 .embed-container-vertical iframe {
@@ -115,6 +128,11 @@
 
 .embed-container-horizontal iframe {
     aspect-ratio: 16 / 9;
+}
+
+/* tiktok embed */
+.embed-tiktok {
+    width: 325px !important;
 }
 
 /* gallery */
@@ -144,4 +162,11 @@
     grid-column: span 1;
     grid-row: span 2;
     /* aspect-ratio: 1/2; */
+}
+
+/* short page */
+.short-links {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
 }

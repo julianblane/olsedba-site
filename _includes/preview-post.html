@@ -5,6 +5,11 @@
 </style>
 
 <div class="post-preview" id="{{include.post.slug}}">
+    {% if include.video %}
+    <span class="post-preview-icon material-symbols-sharp">
+        play_arrow
+    </span>
+    {% endif %}
     {% if include.detailed %}
     <div class="post-preview-fade"></div>
     <div class="post-preview-body">

@@ -3,21 +3,26 @@ layout: post-base
 ---
 
 {% if page.short %}
-{% include embed-youtube.html id=page.short aspect="vertical" %} 
+{% include embed-youtube.html id=page.short aspect="vertical" %}
 {% elsif page.tiktok %}
-<script async src="https://www.tiktok.com/embed.js"></script>
-<blockquote class="tiktok-embed" 
-    cite="https://www.tiktok.com/@{{ page.username }}/video/{{ page.tiktok }}"
-    data-video-id="{{ page.tiktok }}" style="max-width: 605px;min-width: 325px;" muted>
-    <section>
-    </section>
-</blockquote>
+{% include embed-tiktok.html username=page.username tiktok=page.tiktok %} 
 {% endif %}
 
 Ver mas en:
-{% if page.short %}
-    youtube
-{% endif %}
-{% if page.tiktok %}
-    tiktok
-{% endif %}
+<div class="short-links">
+    {% if page.short %}
+    <a href="https://www.youtube.com/shorts/{{ page.short }}">
+        <img src="{{ site.baseurl }}/assets/external/logos/yt-mono-dark.png" style="height: 1em;" alt="youtube">
+    </a>
+    {% endif %}
+    {% if page.tiktok %}
+    <a href="https://www.tiktok.com/@{{ page.username }}/video/{{ page.tiktok }}">
+        <img src="{{ site.baseurl }}/assets/external/logos/tiktok-mono-dark.png" style="height: 1em;" alt="tiktok">
+    </a>
+    {% endif %}
+    {% if page.reel %}
+    <a href="https://www.instagram.com/@{{ page.username }}/reel/{{ page.reel }}/">
+        <img src="{{ site.baseurl }}/assets/external/logos/ig-mono-dark.png" style="height: 1em;" alt="instagram">
+    </a>
+    {% endif %}
+</div>
