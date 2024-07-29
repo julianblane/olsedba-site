@@ -1,3 +1,42 @@
+body {
+    min-height: 100vh;
+    position: relative;
+}
+
+.content {
+    padding-bottom: 6em;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    padding-top: 4em;
+    padding-bottom: 2em;
+
+    place-content: center;
+    display: flex;
+
+    font-size: 1.5em;
+
+    margin-top: auto;
+}
+
+@media screen and (min-width: 1200px) {
+    footer {
+        font-size: 1.25em;
+    }
+}
+
+footer > div {
+    display: flex;
+    align-self: center;
+}
+
+/* helpers */
+
 .no-margin-top {
     margin-top: 0;
 }

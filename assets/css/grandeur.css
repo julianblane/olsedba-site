@@ -186,9 +186,7 @@ a {
     padding: 0 var(--sky-edge-width);
 
     color: ghostwhite;
-    /* align-self: center; */
     margin: auto;
-    /* font-size: 32px */
 }
 
 @media screen and (min-width: 1200px) {
@@ -200,32 +198,10 @@ a {
 }
 
 footer {
-    width: 100%;
-
     background-image: linear-gradient(transparent, var(--sky-colour-left-facing));
     color: var(--sky-colour-bottom-facing);
-
-    padding-top: 4em;
-    padding-bottom: 2em;
-
-    place-content: center;
-    display: flex;
-
-    font-size: 1.5em;
-
-    margin-top: auto;
 }
 
-@media screen and (min-width: 1200px) {
-    footer {
-        font-size: 1.25em;
-    }
-}
-
-footer > div {
-    display: flex;
-    align-self: center;
-}
 
 .author {
     padding-inline: 1em;
