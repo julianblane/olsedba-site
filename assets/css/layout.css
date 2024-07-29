@@ -157,10 +157,19 @@
 }
 
 /* add an invisible element to enforce proportions */
-.grid-container::after {
+.grid-container::before {
+    grid-row: 1 / 1;
+    grid-column: 1 / 1;
     content: '';
     width: 0;
     padding-bottom: 100%;
+}
+
+/* force the first element to be on the first row and column */
+.grid-container > div:first-child {
+    grid-row-start: 1;
+    grid-column-start: 1;
+    color: red;
 }
 
 .grid-container>div {
@@ -171,8 +180,8 @@
 }
 
 .grid-container>.square {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-column-end: span 2;
+    grid-row-end: span 2;
 }
 
 .grid-container>.vertical {
