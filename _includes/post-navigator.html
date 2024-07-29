@@ -1,12 +1,12 @@
 <div class="post-navigator">
     <div class="next-link">
     {% if include.post.next_tags != nil %}
-        <a href="{{site.baseurl}}{{include.post.next_tags.url}}">← {{include.post.next_tags.title}}</a>
+        <a href="{{site.baseurl}}{{include.post.next_tags.url}}#content">← {{include.post.next_tags.title}}</a>
     {% endif %}
     </div>
     <div class="previous-link">
     {% if include.post.previous_tags != nil %}
-        <a href="{{site.baseurl}}{{include.post.previous_tags.url}}">{{include.post.previous_tags.title}} →</a>
+        <a href="{{site.baseurl}}{{include.post.previous_tags.url}}#content">{{include.post.previous_tags.title}} →</a>
     {% endif %}
     </div>
 </div>
