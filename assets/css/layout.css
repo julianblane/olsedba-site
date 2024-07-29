@@ -185,8 +185,8 @@
 }
 
 .grid-container>.vertical {
-    grid-column: span 1;
-    grid-row: span 2;
+    grid-column-end: span 1;
+    grid-row-end: span 2;
 }
 
 /* short page */
