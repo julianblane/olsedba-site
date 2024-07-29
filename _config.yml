@@ -18,20 +18,18 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Your awesome title
-email: your-email@example.com
+title: Julian Blane
+email: julian@julianblane.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Desarrollador
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+github_username:  julianblane
 
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
 
 defaults:
   - scope:
@@ -39,6 +37,17 @@ defaults:
     values:
       layout: project
       permalink: projects/:category/
+
+social:
+  name: Julian Blane
+  links:
+    - https://www.youtube.com/@julianblane
+    - https://www.tiktok.com/@julianblane
+    - https://www.instagram.com/julianblane.dev/
+    - https://github.com/julianblane/
+    - https://www.linkedin.com/in/julianblane
+
+locale: es_AR
 
 # Exclude from processing.
 # The following items will not be processed, by default.
