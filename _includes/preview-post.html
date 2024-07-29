@@ -19,5 +19,5 @@
     {% endif %}
     <!-- TODO: play button para shorts -->
     <div class="post-preview-link" onclick="location.href='{{site.baseurl}}{{include.post.url}}'"></div>
-    {% include post-identifier.html post=post %}
+    {% include post-identifier.html post=post show_project=include.show_project %}
 </div>

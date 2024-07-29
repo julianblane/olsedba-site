@@ -6,7 +6,7 @@ layout: site-grandeur
     {% include breadcrumbs.html categories=page.categories tags=page.tags %}
     <div class="post-date">{{ page.date | split: ' ' | first }}</div>
 </div>
-<h1 style="margin-top: 0;">{{ page.title }}</h1>
+<h1 class="no-margin-top">{{ page.title }}</h1>
 
 {{ content }}
 

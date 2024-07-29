@@ -1,6 +1,9 @@
 <!-- TODO: parametrize whether to show tags -->
 <div class="post-identifier" onclick="location.href='{{site.baseurl}}/{{ include.post.categories | join: '/' }}'">
-    {{ include.post.categories | last | upcase }} {{ include.post.tags | join: ' ' }}
+    {% if include.show_project %}
+    {{ include.post.categories | last | upcase }}
+    {% endif %}
+    {{ include.post.tags | join: ' ' }}
     <div class="post-identifier-date">
         {{ include.post.date | split: ' ' | first | replace: '-', '' }}
     </div>

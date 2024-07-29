@@ -13,7 +13,7 @@
       {% else %}
       {% assign video = false %}
       {% endif %}
-      {% include preview-post.html post=post video=video %}
+      {% include preview-post.html post=post video=video show_project=include.show_project %}
       </div>
     {% endfor %}
   </div>
