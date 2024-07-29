@@ -106,13 +106,13 @@ mesh {
 }
 
 .h1-no-margin {
-    font-size: 10em;
+    font-size: calc(var(--front-cube-width) * .3);
     line-height: .9em;
     font-weight: bolder;
 }
 
 .h2-no-margin {
-    font-size: 4em;
+    font-size: min(5em, calc(var(--front-cube-width) * .16));
     line-height: 1.5em;
 }
 
