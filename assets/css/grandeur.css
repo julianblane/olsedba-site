@@ -61,8 +61,7 @@ mesh {
 .cube-face {
     width: var(--front-cube-width);
     height: var(--front-cube-height);
-
-    /*-webkit-transform-origin: 50% 50% 0;*/
+    z-index: 0;
 }
 
 .cube-face.right {

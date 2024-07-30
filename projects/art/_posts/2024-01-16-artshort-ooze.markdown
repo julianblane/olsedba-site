@@ -1,9 +1,9 @@
 ---
 layout: post-short
-short_title:  "the shadow of your smile"
+short_title:  "Ooze"
 tags: artshort
 tiktok_username: bulianblane
-tiktok: 7322134776129932550
+tiktok: 7324762573918817542
 instagram_username: bulianblane
-reel: C14sGMfLTNx
+reel: C2K9KACv_Gv
 ---
