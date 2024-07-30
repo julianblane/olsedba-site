@@ -24,9 +24,11 @@ module Jekyll
         # TODO: project-dependant title (micro-description of project)
 
         # Initialize data hash with a key pointing to all posts under current category.
+        project = site.data["projects"][category] || {}
         @data = {
-          'short_title' => "#{category.to_s.capitalize}",
-          'title' => "#{category.to_s.capitalize}: updates y contenido del proyecto",
+          'short_title' => project['name'],
+          'title' => "#{project['name']}: updates y contenido del proyecto",
+          'description' => project['description'],
           'posts' => posts
         }
   

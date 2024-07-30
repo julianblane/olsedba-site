@@ -13,6 +13,13 @@ module Jekyll
           post.data["title"] = "#{post.data['tags'].last.to_s.capitalize} de #{post.data['categories'].last.to_s.capitalize}: #{post.data['short_title']}"
         end
 
+        if !post.data["description"]
+          project = site.data["projects"][post.data["categories"].last.to_s]
+          if project
+            post.data["description"] = project["description"]
+          end
+        end
+
         post.data["seo"] ||= {}
         post.data["seo"]["name"] = post.data["title"]
       end
