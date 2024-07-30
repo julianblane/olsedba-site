@@ -21,8 +21,6 @@ module Jekyll
         @ext      = '.html'      # the extension.
         @name     = 'index.html' # basically @basename + @ext.
   
-        # TODO: project-dependant title (micro-description of project)
-
         # Initialize data hash with a key pointing to all posts under current category.
         project = site.data["projects"][category] || {}
         @data = {

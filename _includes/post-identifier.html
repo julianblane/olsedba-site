@@ -1,5 +1,5 @@
 <!-- TODO: parametrize whether to show tags -->
-<div class="post-identifier" onclick="location.href='{{site.baseurl}}/{{ include.post.categories | join: '/' }}'">
+<a class="post-identifier" href="{{site.baseurl}}/{{ include.post.categories | join: '/' }}">
     {% if include.show_project %}
     {{ include.post.categories | last | upcase }}
     {% endif %}
@@ -7,4 +7,4 @@
     <div class="post-identifier-date">
         {{ include.post.date | split: ' ' | first | replace: '-', '' }}
     </div>
-</div>
+</a>
