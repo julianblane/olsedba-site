@@ -13,7 +13,7 @@
     {% if include.detailed %}
     <div class="post-preview-fade"></div>
     <div class="post-preview-body">
-        <h2>{{ include.post.title }}</h2>
+        <h2>{{ include.post.short_title }}</h2>
         <p>{{ include.post.excerpt | markdownify }}</p>
     </div>
     {% endif %}

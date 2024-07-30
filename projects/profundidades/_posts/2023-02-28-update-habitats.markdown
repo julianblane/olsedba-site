@@ -1,6 +1,6 @@
 ---
 layout: post-devlog
-title:  "Habitats"
+short_title:  "Habitats"
 tags: devlog
 ---
 - Primer prototipo de habitats, spawnean criaturas cuando el submarino esta cerca.

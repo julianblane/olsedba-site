@@ -2,11 +2,15 @@
 layout: site-grandeur
 ---
 
+<head>
+    <title>{{ page.categories.last | capitalize }}: {{ page.short_title }} | {{ site.title }}</title>
+</head>
+
 <div class="post-header" id="content">
     {% include breadcrumbs.html categories=page.categories tags=page.tags %}
     <div class="post-date">{{ page.date | split: ' ' | first }}</div>
 </div>
-<h1 class="no-margin-top">{{ page.title }}</h1>
+<h1 class="no-margin-top">{{ page.short_title }}</h1>
 
 {{ content }}
 

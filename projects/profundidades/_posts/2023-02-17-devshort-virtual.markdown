@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title:  "submarino virtual"
+short_title:  "submarino virtual"
 tags: devshort
 username: julianblane
 tiktok: 7213910025612381445

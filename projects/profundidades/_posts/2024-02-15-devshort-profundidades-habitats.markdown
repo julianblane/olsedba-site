@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title: "habitats"
+short_title: "habitats"
 
 tags: devshort
 short: pSe03VkhsqU

@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title:  "No apto para claustrofobicos"
+short_title:  "No apto para claustrofobicos"
 tags: devshort
 username: julianblane
 tiktok: 7335939515699252485

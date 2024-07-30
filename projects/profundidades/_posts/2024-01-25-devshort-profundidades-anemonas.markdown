@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title:  "anemonas"
+short_title:  "anemonas"
 
 tags: devshort
 short: thu_pnvRmD4

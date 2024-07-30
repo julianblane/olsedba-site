@@ -1,6 +1,6 @@
 ---
 layout: post-devlog
-title:  "Pulpo dumbo"
+short_title:  "Pulpo dumbo"
 tags: devlog
 excerpt_separator: <!-- preview -->
 ---

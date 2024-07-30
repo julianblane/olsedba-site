@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title:  "ambientacion"
+short_title:  "ambientacion"
 tags: devshort
 username: julianblane
 tiktok: none

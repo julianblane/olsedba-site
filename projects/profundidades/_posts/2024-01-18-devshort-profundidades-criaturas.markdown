@@ -1,6 +1,6 @@
 ---
 layout: post-short
-title:  "criaturas"
+short_title:  "criaturas"
 
 tags: devshort
 short: lYXiR6tcVpo
