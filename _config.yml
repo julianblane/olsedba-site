@@ -47,6 +47,10 @@ social:
     - https://github.com/julianblane/
     - https://www.linkedin.com/in/julianblane
 
+author:
+  name: Julian Blane
+  url: https://julianblane.com/
+
 locale: es_AR
 
 # Exclude from processing.
