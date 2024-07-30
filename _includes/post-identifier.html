@@ -1,7 +1,7 @@
 <!-- TODO: parametrize whether to show tags -->
 <a class="post-identifier" href="{{site.baseurl}}/{{ include.post.categories | join: '/' }}">
     {% if include.show_project %}
-    {{ include.post.categories | last | upcase }}
+    {{ include.post.project | upcase }}
     {% endif %}
     {{ include.post.tags | join: ' ' }}
     <div class="post-identifier-date">

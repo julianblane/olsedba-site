@@ -7,3 +7,6 @@ olsedba:
   name: olsedba
   description: >-
     olsedba es un shooter.
+
+art:
+# TODO: title override

@@ -5,13 +5,14 @@ module Jekyll
       tag_map = Hash.new { |h, k| h[k] = [] }
       site.posts.each do |post|
         post.data["image"] = "#{site.baseurl}/assets/posts/#{post.date.to_s.split(' ').first}-#{post.data['slug']}.jpeg"
+
         project = site.data["projects"][post.data["categories"].last.to_s]
+        post.data['project'] = project
 
         if post.data['categories'].include?("art")
           post.data["title"] = "#{post.data['tags'].last.to_s.capitalize}: #{post.data['short_title']}"
-          # TODO: use micro-description of projects for the shorts
         else
-          post.data["title"] = "#{post.data['tags'].last.to_s.capitalize} de #{post.data['categories'].last.to_s.capitalize}: #{post.data['short_title']}"
+          post.data["title"] = "#{post.data['tags'].last.to_s.capitalize} de #{project['name'] if project}: #{post.data['short_title']}"
         end
 
         if post.data['tags'].include?("devshort") || post.data['tags'].include?("artshort")
