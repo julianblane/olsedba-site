@@ -5,7 +5,7 @@ layout: post-base
 {% if page.short %}
 {% include embed-youtube.html id=page.short aspect="vertical" %}
 {% elsif page.tiktok %}
-{% include embed-tiktok.html username=page.username tiktok=page.tiktok %} 
+{% include embed-tiktok.html username=page.tiktok_username tiktok=page.tiktok %} 
 {% endif %}
 
 Dale like y seguime en:
@@ -16,12 +16,12 @@ Dale like y seguime en:
     </a>
     {% endif %}
     {% if page.tiktok %}
-    <a href="https://www.tiktok.com/@{{ page.username }}/video/{{ page.tiktok }}">
+    <a href="https://www.tiktok.com/@{{ page.tiktok_username }}/video/{{ page.tiktok }}">
         <img src="{{ site.baseurl }}/assets/external/logos/tiktok-mono-dark.png" style="height: 1em;" alt="tiktok">
     </a>
     {% endif %}
     {% if page.reel %}
-    <a href="https://www.instagram.com/@{{ page.username }}/reel/{{ page.reel }}/">
+    <a href="https://www.instagram.com/{{ page.instagram_username }}/reel/{{ page.reel }}/">
         <img src="{{ site.baseurl }}/assets/external/logos/ig-mono-dark.png" style="height: 1em;" alt="instagram">
     </a>
     {% endif %}
