@@ -35,6 +35,10 @@ footer > div {
     align-self: center;
 }
 
+footer > .links > a > img {
+    vertical-align: middle;
+}
+
 /* helpers */
 
 .no-margin-top {

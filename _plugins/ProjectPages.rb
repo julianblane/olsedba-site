@@ -27,7 +27,8 @@ module Jekyll
           'short_title' => project['name'],
           'title' => "#{project['name']}: updates y contenido del proyecto",
           'description' => project['description'],
-          'posts' => posts
+          'posts' => posts,
+          'image' => "#{site.baseurl}/assets/projects/#{category}.jpeg"
         }
   
         # Look up front matter defaults scoped to type `categories`, if given key
