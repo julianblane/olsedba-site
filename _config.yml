@@ -32,13 +32,6 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-defaults:
-  - scope:
-      type: categories  # select all category pages
-    values:
-      layout: project
-      permalink: projects/:category/
-
 social:
   name: Julian Blane
   links:

@@ -3,15 +3,24 @@ module Jekyll
       safe true
   
       def generate(site)
-        site.categories.each do |category, posts|
-          site.pages << ProjectPage.new(site, category, posts)
+        project_paths = Hash.new { |h, k| h[k] = [] }
+        site.posts.each do |post|
+          project = post.categories.join('/')
+          project_paths[project].prepend(post)
+        end
+
+        project_paths.each do |path, posts|
+          site.pages << ProjectPage.new(site, path, posts)
         end
       end
     end
   
     # Subclass of `Jekyll::Page` with custom method definitions.
     class ProjectPage < Page
-      def initialize(site, category, posts)
+      def initialize(site, path, posts)
+        category = path.split('/').last
+        project = site.data["projects"][category] || {}
+
         @site = site             # the current site instance.
         @base = site.source      # path to the source directory.
         @dir  = category         # the directory the page will reside in.
@@ -22,29 +31,14 @@ module Jekyll
         @name     = 'index.html' # basically @basename + @ext.
   
         # Initialize data hash with a key pointing to all posts under current category.
-        project = site.data["projects"][category] || {}
         @data = {
           'short_title' => project['name'],
-          'title' => "#{project['name']}: updates y contenido del proyecto",
+          'title' => project['title'] || "#{project['name']}: updates y contenido del proyecto",
           'description' => project['description'],
           'posts' => posts,
-          'image' => "#{site.baseurl}/assets/projects/#{category}.jpeg"
-        }
-  
-        # Look up front matter defaults scoped to type `categories`, if given key
-        # doesn't exist in the `data` hash.
-        data.default_proc = proc do |_, key|
-          site.frontmatter_defaults.find(relative_path, :categories, key)
-        end
-      end
-  
-      # Placeholders that are used in constructing page URL.
-      def url_placeholders
-        {
-          :path       => @dir,
-          :category   => @dir,
-          :basename   => basename,
-          :output_ext => output_ext,
+          'image' => "#{site.baseurl}/assets/projects/#{category}.jpeg",
+          'layout'=> "project",
+          'permalink'=> path
         }
       end
     end
