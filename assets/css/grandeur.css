@@ -4,16 +4,14 @@
 }
 
 :root {
-    --stage-height: calc(var(--front-cube-height) + var(--front-cube-top-margin) + var(--sky-edge-height));
-
-    --front-cube-width: min(42em, 55vw);
-    --front-cube-height: clamp(20em, 42em, var(--front-cube-width));
-    --front-cube-top-margin: 7vw;
-    --front-cube-stickout: 9vw;
-    --front-cube-offset: calc((50vw - var(--sky-edge-width)) / 4.5);
-
-    --sky-edge-height: clamp(5vw, 9em, 7vw);
-    --sky-edge-width: max(5vw, calc(50vw - var(--front-cube-width)));
+    --stage-height: min(33vh, 75vw);
+    
+    --front-cube-lenght: calc(var(--stage-height) - (var(--sky-padding-vertical) * 2));
+    --front-cube-stickout: 5vh;
+    --front-cube-offset: calc((50vw - var(--sky-padding-horizontal)) / 4.5);
+    
+    --sky-padding-vertical: 4vh;
+    --sky-padding-horizontal: max(calc(var(--sky-padding-vertical)/2), calc((100vw - 1024px) / 2));
 
     --sky-colour-fade-up: blue;
 
@@ -25,7 +23,6 @@
 }
 
 body {
-    /* min-height: 100vh; */
     font-family: "Coda";
     margin: 0;
     background-color: var(--sky-colour);
@@ -36,8 +33,8 @@ body {
     width: 100%;
     height: var(--stage-height);
 
-    -webkit-perspective: 4269px;
-    -webkit-perspective-origin: 50% 150%;
+    perspective: 4269px;
+    perspective-origin: 50% 1152px;
 
     background-color: var(--sky-colour);
     background-image: linear-gradient(var(--sky-colour-right-facing), transparent);
@@ -54,13 +51,13 @@ mesh {
 }
 
 .cube {
-    -webkit-transform: translateX(calc(50vw - var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(30deg) translateY(var(--front-cube-top-margin));
+    -webkit-transform: translateX(calc(50vw - var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(30deg) translateY(var(--sky-padding-vertical));
     -webkit-transform-origin: 0 0;
 }
 
 .cube-face {
-    width: var(--front-cube-width);
-    height: var(--front-cube-height);
+    width: var(--front-cube-lenght);
+    height: var(--front-cube-lenght);
     z-index: 0;
 }
 
@@ -72,16 +69,16 @@ mesh {
     background-color: var(--sky-colour-left-facing);
 
     -webkit-transform-origin: 100%;
-    -webkit-transform: translateX(calc(var(--front-cube-width) * -1)) rotateY(270deg);
+    -webkit-transform: translateX(calc(var(--front-cube-lenght) * -1)) rotateY(270deg);
 }
 
 .cube-face.bottom {
     background-color: var(--sky-colour-bottom-facing);
 
-    height: var(--front-cube-width);
+    height: var(--front-cube-lenght);
 
     -webkit-transform-origin: 0 0 0;
-    -webkit-transform: rotateX(-90deg) translateZ(calc(var(--front-cube-height)));
+    -webkit-transform: rotateX(-90deg) translateZ(calc(var(--front-cube-lenght)));
 }
 
 /* sky-fade */
@@ -99,26 +96,19 @@ mesh {
 
 .absolute-bottom-left {
     position: absolute;
-    left: 0;
-    bottom: 0;
-    padding: 0.5em 1em;
+    inset: auto 0 0;
+    padding: 0.5em;
 }
 
 .h1-no-margin {
-    font-size: calc(var(--front-cube-width) * .3);
+    font-size: calc(var(--front-cube-lenght) * .3);
     line-height: .9em;
     font-weight: bolder;
 }
 
 .h2-no-margin {
-    font-size: min(5em, calc(var(--front-cube-width) * .16));
-    line-height: 1.5em;
-}
-
-@media screen and (min-width: 1200px) {
-    .h2-no-margin {
-        line-height: .9em;
-    }
+    font-size: calc(var(--front-cube-lenght)* 0.1);;
+    line-height: .9em;
 }
 
 a {
@@ -138,69 +128,63 @@ a {
 
 .sky-edge {
     -webkit-transform-style: preserve-3d;
-    -webkit-transform: translateY(calc(var(--front-cube-top-margin) + var(--front-cube-height)));
+    -webkit-transform: translateY(calc(var(--sky-padding-vertical) + var(--front-cube-lenght)));
 }
 
 .sky-edge > .right {
-    -webkit-transform: translateX(calc(100vw - var(--sky-edge-width))) translateY(calc(var(--front-cube-height) * -1));
+    -webkit-transform: translateX(calc(100vw - var(--sky-padding-horizontal))) translateY(calc(var(--front-cube-lenght) * -1));
 }
 
 .sky-edge > .left {
-    -webkit-transform: translateX(var(--sky-edge-width)) translateY(calc(var(--front-cube-height) * -1));
+    -webkit-transform: translateX(var(--sky-padding-horizontal)) translateY(calc(var(--front-cube-lenght) * -1));
 }
 
 .sky-edge > face {
-    height: var(--sky-edge-height);
+    height: calc(var(--sky-padding-vertical) * 2);
     width: 100vw;
     background-color: var(--sky-colour);
 }
 
 .sky-edge > mesh > face {
-    height: var(--front-cube-height);
+    height: var(--front-cube-lenght);
 }
 
 .sky-edge > mesh > .side {
-    width: var(--front-cube-width);
+    width: var(--front-cube-lenght);
     background-color: var(--sky-colour-left-facing);
     -webkit-transform: rotateY(90deg);
     -webkit-transform-origin: 0 0;
 }
 
 .sky-edge > mesh > .front {
-    width: var(--sky-edge-width);
+    width: var(--sky-padding-horizontal);
     background-color: var(--sky-colour);
 }
 
 .sky-edge > .left > .front {
-    -webkit-transform: translateX(calc(var(--sky-edge-width) * -1));
+    -webkit-transform: translateX(calc(var(--sky-padding-horizontal) * -1));
 }
 
 .sky-edge > .left > .side {
     background-color: var(--sky-colour-right-facing);
 }
 
-/* content */
 .content {
-    font-size: 2em;
-    padding: 0 var(--sky-edge-width);
-
+    padding: 0 var(--sky-padding-horizontal);
     color: ghostwhite;
     margin: auto;
-}
 
-@media screen and (min-width: 1200px) {
-    .content {
-        font-size: 1.5em;
-        max-width: 55em;
-        /* margin: auto; */
-    }
+    position: relative;
+    z-index: 1;
 }
 
 footer {
     background-image: linear-gradient(transparent, var(--sky-colour-left-facing));
     color: var(--sky-colour-bottom-facing);
-}
 
+    position: relative;
+    z-index: 1;
+}
 
 .author {
     padding-inline: 1em;
