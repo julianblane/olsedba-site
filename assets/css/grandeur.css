@@ -8,7 +8,7 @@
     
     --front-cube-lenght: calc(var(--stage-height) - (var(--sky-padding-vertical) * 2));
     --front-cube-stickout: 5vh;
-    --front-cube-offset: calc((50vw - var(--sky-padding-horizontal)) / 4.5);
+    --front-cube-offset: 10vw;
     
     --sky-padding-vertical: 4vh;
     --sky-padding-horizontal: max(calc(var(--sky-padding-vertical)/2), calc((100vw - 1024px) / 2));
@@ -20,6 +20,12 @@
     --sky-colour-right-facing: hsl(var(--sky-colour-hue) 59% 65%);
     --sky-colour-left-facing: hsl(var(--sky-colour-hue) 66% 77%);
     --sky-colour-bottom-facing: hsl(var(--sky-colour-hue) 50% 55%);
+}
+
+@media screen and (orientation: landscape) {
+    :root {
+        --front-cube-offset: var(--front-cube-lenght) ;
+    }
 }
 
 body {
@@ -50,9 +56,19 @@ mesh {
     position: absolute;
 }
 
-.cube {
-    -webkit-transform: translateX(calc(50vw - var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(30deg) translateY(var(--sky-padding-vertical));
-    -webkit-transform-origin: 0 0;
+.cube-primary {
+    transform: translateX(calc(50vw - var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(30deg) translateY(var(--sky-padding-vertical));
+    /* transform-origin: 0 0; */
+}
+
+.cube-secondary {
+    transform: translateX(calc(50vw + var(--front-cube-offset))) translateZ(var(--front-cube-stickout)) rotateY(70deg) translateY(var(--sky-padding-vertical));
+    /* transform-origin: 0 0; */
+}
+
+.cube-secondary>.front{
+    transform: rotateY(-90deg) translateX(calc(var(--front-cube-lenght)* -1));
+    transform-origin: 0 0;
 }
 
 .cube-face {
@@ -61,15 +77,19 @@ mesh {
     z-index: 0;
 }
 
-.cube-face.right {
+.cube-face.front {
     background-color: var(--sky-colour);
 }
 
-.cube-face.front {
+.cube-face.left {
     background-color: var(--sky-colour-left-facing);
 
     -webkit-transform-origin: 100%;
     -webkit-transform: translateX(calc(var(--front-cube-lenght) * -1)) rotateY(270deg);
+}
+
+.cube-face.right {
+    background-color: var(--sky-colour-right-facing);
 }
 
 .cube-face.bottom {
@@ -79,6 +99,17 @@ mesh {
 
     -webkit-transform-origin: 0 0 0;
     -webkit-transform: rotateX(-90deg) translateZ(calc(var(--front-cube-lenght)));
+}
+
+/* second cube */
+.cube-secondary {
+    display: none;
+}
+
+@media screen and (orientation: landscape) {
+    .cube-secondary {
+        display: unset;
+    }
 }
 
 /* sky-fade */
