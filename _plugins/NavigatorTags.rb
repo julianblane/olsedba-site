@@ -3,7 +3,7 @@ module Jekyll
     def generate(site)
       # Generate a map of all posts grouped by the exact same tags and categories combination
       tag_map = Hash.new { |h, k| h[k] = [] }
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         tags = post.data['tags'] + post.data['categories']
         tag_map[tags] << post
       end
@@ -28,7 +28,7 @@ module Jekyll
         end
       end
 
-      site.posts.each do |post|
+      site.posts.docs.each do |post|
         post.data['debug'] = tag_map
       end
     end

@@ -4,8 +4,8 @@ module Jekyll
   
       def generate(site)
         project_paths = Hash.new { |h, k| h[k] = [] }
-        site.posts.each do |post|
-          project = post.categories.join('/')
+        site.posts.docs.each do |post|
+          project = post.data['categories'].join('/')
           project_paths[project].prepend(post)
         end
 
