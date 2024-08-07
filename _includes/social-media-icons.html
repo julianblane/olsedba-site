@@ -1,0 +1,17 @@
+<div class="short-links">
+    {% if include.youtube %}
+    <a href="https://www.youtube.com/@{{include.youtube}}">
+        <img src="{{ site.baseurl }}/assets/external/logos/yt-mono-dark.png" style="height: 1em;" alt="youtube">
+    </a>
+    {% endif %}
+    {% if include.tiktok %}
+    <a href="https://www.tiktok.com/@{{include.tiktok}}">
+        <img src="{{ site.baseurl }}/assets/external/logos/tiktok-mono-dark.png" style="height: 1em;" alt="tiktok">
+    </a>
+    {% endif %}
+    {% if include.instagram %}
+    <a href="https://www.instagram.com/{{include.instagram}}/">
+        <img src="{{ site.baseurl }}/assets/external/logos/ig-mono-dark.png" style="height: 1em;" alt="instagram">
+    </a>
+    {% endif %}
+</div>

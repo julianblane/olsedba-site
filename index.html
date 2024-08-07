@@ -11,11 +11,15 @@ image: /assets/projects/grandeur.jpeg
 {% assign devshort = site.tags.devshort | first %}
 {% assign artshort = site.tags.artshort | first %}
 {% assign release = site.tags.release | first %}
+{% assign announcement = site.tags.announcement | first %}
+{% assign socialmedia = site.tags.socialmedia | first %}
 
 {% assign posts = "" | split: ',' %}
 {% assign posts = posts | push: devlog %}
 {% assign posts = posts | push: devshort %}
 {% assign posts = posts | push: artshort %}
 {% assign posts = posts | push: release %}
+{% assign posts = posts | push: announcement %}
+{% assign posts = posts | push: socialmedia %}
 
 {% include gallery.html posts=posts show_project=true %}

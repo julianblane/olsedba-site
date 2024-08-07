@@ -17,7 +17,6 @@
         <p>{{ include.post.excerpt | markdownify }}</p>
     </div>
     {% endif %}
-    <!-- TODO: play button para shorts -->
     <a class="post-preview-link" href="{{site.baseurl}}{{include.post.url}}"></a>
-    {% include post-identifier.html post=post show_project=include.show_project %}
+    {% include post-identifier.html post=post show_project=include.show_project show_tags=include.show_tags show_date=include.show_date %}
 </div>

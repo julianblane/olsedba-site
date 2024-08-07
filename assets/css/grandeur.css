@@ -221,12 +221,9 @@ footer {
     padding-inline: 1em;
 }
 
-.links > a {
+.links > a > img {
     padding-inline: 0.5em;
     align-self: center;
-}
-
-.links > a > img {
     max-height: 2em;
 }
 

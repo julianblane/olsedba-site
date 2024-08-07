@@ -262,8 +262,13 @@ footer > .links > a > img {
     grid-row-end: span 2;
 }
 
+.grid-container>.horizontal {
+    grid-column-end: span 3;
+}
+
 /* short page */
 .short-links {
+    font-size: 1.5em;
     display: flex;
     gap: 1.5em;
     justify-content: center;

@@ -5,15 +5,28 @@
       <div class="square">
       {% elsif post.tags contains "devshort" or post.tags contains "artshort" %}
       <div class="vertical">
+      {% elsif post.tags contains "announcement" %}
+      <div class="horizontal">
       {% else %}
       <div>
       {% endif %}
+
       {% if post.tags contains "devshort" or post.tags contains "artshort" %}
       {% assign video = true %}
       {% else %}
       {% assign video = false %}
       {% endif %}
-      {% include preview-post.html post=post video=video show_project=include.show_project %}
+
+      {% if post.tags contains "announcement" %}
+      {% assign show_tags = false %}
+      <!-- TODO: mostrar fecha siempre -->
+      {% assign show_date = false %}
+      {% else %}
+      {% assign show_tags = true %}
+      {% assign show_date = true %}
+      {% endif %}
+
+      {% include preview-post.html post=post video=video show_project=include.show_project show_tags=show_tags show_date=show_date %}
       </div>
     {% endfor %}
   </div>

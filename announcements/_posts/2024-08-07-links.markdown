@@ -1,0 +1,13 @@
+---
+permalink: /links/
+layout: post-devlog
+short_title:  "Unite a la comunidad!"
+tags: announcement socialmedia
+---
+Veni a charlar con nosotros en mi [Discord](https://discord.gg/qweCwhkDSU).
+
+Buscame como ```julianblane``` para enterarte de las actualizaciones de mis juegos:
+{% include social-media-icons.html youtube="julianblane" tiktok="julianblane" instagram="julianblane.dev" %}
+
+O como ```bulianblane``` para las cosas menos estructuradas:
+{% include social-media-icons.html tiktok="bulianblane" instagram="bulianblane" %}

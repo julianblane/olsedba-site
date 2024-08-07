@@ -3,8 +3,12 @@
     {% if include.show_project %}
     {{ include.post.project.name | upcase }}
     {% endif %}
+    {% if include.show_tags %}
     {{ include.post.tags | join: ' ' }}
+    {% endif %}
+    {% if include.show_date %}
     <div class="post-identifier-date">
         {{ include.post.date | split: ' ' | first | replace: '-', '' }}
     </div>
+    {% endif %}
 </a>
