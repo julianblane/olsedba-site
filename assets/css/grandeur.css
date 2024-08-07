@@ -107,6 +107,9 @@ mesh {
 }
 
 @media screen and (orientation: landscape) {
+    .cube-primary > .cube-face.left > div {
+        display: none;
+    }
     .cube-secondary {
         display: unset;
     }
