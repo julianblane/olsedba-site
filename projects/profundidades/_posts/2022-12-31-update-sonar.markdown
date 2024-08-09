@@ -1,6 +1,6 @@
 ---
 layout: post-devlog
-short_title:  "Controles del submarino"
+short_title:  "Sonar Holografico"
 tags: devlog
 excerpt_separator: <!-- preview -->
 ---
