@@ -1,5 +1,5 @@
 ---
-permalink: /links/
+permalink: /links
 layout: post-devlog
 short_title:  "Unite a la comunidad!"
 tags: announcement socialmedia

@@ -55,6 +55,7 @@ defaults:
       layout: site-grandeur
       header: JULIAN BLANE
 
+permalink: /:categories/:year/:month/:day/:title
 
 # Exclude from processing.
 # The following items will not be processed, by default.
