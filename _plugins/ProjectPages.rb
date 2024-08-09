@@ -8,14 +8,14 @@ module Jekyll
           # ignore about post
           post.data['tags'].include?('about') and next
 
-          project = post.data['categories'].join('/')
+          project = "#{post.data['categories'].join('/')}/"
           project_paths[project].prepend(post)
         end
 
         # prepend about posts so they show on top of the project page
         site.tags['about'].each do |post|
-          project = post.data['categories'].join('/')
-          post.data['permalink'] = "#{project}/about"
+          project = "#{post.data['categories'].join('/')}/"
+          post.data['permalink'] = "#{project}about"
           project_paths[project].prepend(post)
         end
 

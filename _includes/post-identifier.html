@@ -1,5 +1,5 @@
 <!-- TODO: parametrize whether to show tags -->
-<a class="post-identifier" href="{{site.baseurl}}/{{ include.post.categories | join: '/' }}">
+<a class="post-identifier" href="{{site.baseurl}}/{{ include.post.categories | join: '/' }}/">
     {% if include.show_project %}
     {{ include.post.project.name | upcase }}
     {% endif %}
