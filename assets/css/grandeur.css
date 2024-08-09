@@ -20,6 +20,8 @@
     --sky-colour-right-facing: hsl(var(--sky-colour-hue) 59% 65%);
     --sky-colour-left-facing: hsl(var(--sky-colour-hue) 66% 77%);
     --sky-colour-bottom-facing: hsl(var(--sky-colour-hue) 50% 55%);
+
+    --font-colour: ghostwhite;
 }
 
 @media screen and (orientation: landscape) {
@@ -115,11 +117,6 @@ mesh {
     }
 }
 
-/* sky-fade */
-.background-gradient-sky-top {
-    background-image: linear-gradient(var(--sky-colour-fade-up), transparent);
-}
-
 /* sky-content */
 .absolute-bottom-right {
     position: absolute;
@@ -205,7 +202,7 @@ a {
 
 .content {
     padding: 0 var(--sky-padding-horizontal);
-    color: ghostwhite;
+    color: var(--font-colour);
     margin: auto;
 
     position: relative;
@@ -235,7 +232,7 @@ footer {
     margin: 0 0;
     text-transform: uppercase;
 
-    color: ghostwhite !important;
+    color: var(--font-colour) !important;
 }
 
 h1, h2 {

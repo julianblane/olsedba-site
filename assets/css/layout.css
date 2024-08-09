@@ -72,7 +72,7 @@ footer > .links > a > img {
     height: 100%;
     background-size: cover;
     background-position: center;
-    color: white;
+    color: var(--font-colour);
 
     position: relative;
 }
@@ -105,7 +105,7 @@ footer > .links > a > img {
 }
 
 .post-preview-body>h1 {
-    color: white;
+    color: var(--font-colour);
 }
 
 .post-preview-fade {
@@ -128,7 +128,7 @@ footer > .links > a > img {
     background-image: linear-gradient(45deg, var(--sky-colour), transparent);
     padding: .5em;
     cursor: pointer;
-    color: ghostwhite;
+    color: var(--font-colour);
 
     font-size: 1em;
 }
@@ -252,7 +252,6 @@ footer > .links > a > img {
 .grid-container > div:first-child {
     grid-row-start: 1;
     grid-column-start: 1;
-    color: red;
 }
 
 .grid-container>div {

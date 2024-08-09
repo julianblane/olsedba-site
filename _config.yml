@@ -50,9 +50,11 @@ locale: es_AR
 defaults:
   -
     scope:
-      path: ""
+      path: 
     values:
-      header: "JULIAN BLANE"
+      layout: site-grandeur
+      header: JULIAN BLANE
+
 
 # Exclude from processing.
 # The following items will not be processed, by default.
