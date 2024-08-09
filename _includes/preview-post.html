@@ -13,10 +13,13 @@
     {% if include.detailed %}
     <div class="post-preview-fade"></div>
     <div class="post-preview-body">
-        <h2>{{ include.post.short_title }}</h2>
-        <p>{{ include.post.excerpt | markdownify }}</p>
+        <h1>{{ include.post.short_title }}</h1>
+        <p class="post-preview-excerpt">{{ include.post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}...</p>
     </div>
     {% endif %}
     <a class="post-preview-link" href="{{site.baseurl}}{{include.post.url}}"></a>
-    {% include post-identifier.html post=post show_project=include.show_project show_tags=include.show_tags show_date=include.show_date %}
+
+    {% if include.show_project or include.show_tags or include.show_date %}
+        {% include post-identifier.html post=post show_project=include.show_project show_tags=include.show_tags show_date=include.show_date %}
+    {% endif %}
 </div>

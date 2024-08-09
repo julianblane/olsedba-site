@@ -7,26 +7,35 @@
       <div class="vertical">
       {% elsif post.tags contains "announcement" %}
       <div class="horizontal">
+      {% elsif post.tags contains "about" %}
+      <div class="breaker">
       {% else %}
       <div>
       {% endif %}
 
       {% if post.tags contains "devshort" or post.tags contains "artshort" %}
-      {% assign video = true %}
+        {% assign video = true %}
       {% else %}
-      {% assign video = false %}
+        {% assign video = false %}
       {% endif %}
 
-      {% if post.tags contains "announcement" %}
-      {% assign show_tags = false %}
-      <!-- TODO: mostrar fecha siempre -->
-      {% assign show_date = false %}
+      {% if post.tags contains "announcement" or post.tags contains "about" %}
+        {% assign show_tags = false %}
+        {% assign show_date = false %}
+        {% assign show_project = false %}
       {% else %}
-      {% assign show_tags = true %}
-      {% assign show_date = true %}
+        {% assign show_tags = true %}
+        {% assign show_date = true %}
+        {% assign show_project = include.show_project %}
       {% endif %}
 
-      {% include preview-post.html post=post video=video show_project=include.show_project show_tags=show_tags show_date=show_date %}
+      {% if post.tags contains "about" %}
+        {% assign detailed = true %}
+      {% else %}
+        {% assign detailed = false %}
+      {% endif %}
+
+      {% include preview-post.html post=post detailed=detailed video=video show_project=show_project show_tags=show_tags show_date=show_date %}
       </div>
     {% endfor %}
   </div>

@@ -5,7 +5,17 @@ module Jekyll
       def generate(site)
         project_paths = Hash.new { |h, k| h[k] = [] }
         site.posts.docs.each do |post|
+          # ignore about post
+          post.data['tags'].include?('about') and next
+
           project = post.data['categories'].join('/')
+          project_paths[project].prepend(post)
+        end
+
+        # prepend about posts so they show on top of the project page
+        site.tags['about'].each do |post|
+          project = post.data['categories'].join('/')
+          post.data['permalink'] = "#{project}/about"
           project_paths[project].prepend(post)
         end
 
@@ -38,6 +48,7 @@ module Jekyll
           'posts' => posts,
           'image' => "#{site.baseurl}/assets/projects/#{category}.jpeg",
           'layout'=> "project",
+          'has_about_post' => posts.any? { |post| post.data['tags'].include?('about') },
           'permalink'=> path
         }
       end
