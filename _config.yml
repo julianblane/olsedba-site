@@ -54,6 +54,7 @@ defaults:
     values:
       layout: site-grandeur
       header: JULIAN BLANE
+      excerpt_separator: <!-- preview -->
 
 permalink: /:categories/:year/:month/:day/:title
 

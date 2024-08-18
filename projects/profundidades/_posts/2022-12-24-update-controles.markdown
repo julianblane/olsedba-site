@@ -2,7 +2,6 @@
 layout: post-devlog
 short_title:  "Controles del submarino"
 tags: devlog
-excerpt_separator: <!-- preview -->
 ---
 
 Cree la primera iteracion de los controles, asi como la dinamica que dicta como va a ser el movimiento del submarino.

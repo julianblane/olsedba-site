@@ -2,7 +2,6 @@
 layout: post-devlog
 short_title:  "Profundidades"
 tags: about
-excerpt_separator: <!-- preview -->
 ---
 
 Profundidades es una experiencia de VR en la que vas a explorar el fondo marino en busqueda de criaturas exoticas.\
