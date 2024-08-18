@@ -6,6 +6,12 @@ layout: site-grandeur
     <title>{{ page.short_title }} | {{ site.title }}</title>
 </head>
 
+<style>
+    #nav-{{ page.project }} {
+        color: var(--sky-colour-bottom-facing) !important;
+    }
+</style>
+
 {% unless page.has_about_post %}
 <h1 class="no-margin-top">{{ page.short_title }}</h1>
 {% endunless %}

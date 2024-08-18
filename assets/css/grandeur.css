@@ -137,9 +137,8 @@ mesh {
     font-weight: bolder;
 }
 
-.h2-no-margin {
+.h-project {
     font-size: calc(var(--front-cube-lenght)* 0.1);;
-    line-height: .9em;
 }
 
 a {

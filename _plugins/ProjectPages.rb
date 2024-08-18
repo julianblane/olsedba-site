@@ -19,6 +19,7 @@ module Jekyll
           project_paths[project].prepend(post)
         end
 
+        # create a page for each project
         project_paths.each do |path, posts|
           site.pages << ProjectPage.new(site, path, posts)
         end
@@ -40,8 +41,11 @@ module Jekyll
         @ext      = '.html'      # the extension.
         @name     = 'index.html' # basically @basename + @ext.
   
+        project['url'] = path
+
         # Initialize data hash with a key pointing to all posts under current category.
         @data = {
+          'project' => category,
           'short_title' => project['name'],
           'title' => project['title'] || "#{project['name']}: updates y contenido del proyecto",
           'description' => project['description'],
