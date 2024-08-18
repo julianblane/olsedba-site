@@ -11,17 +11,17 @@ layout: post-base
 Dale like y seguime en:
 <div class="short-links">
     {% if page.short %}
-    <a href="https://www.youtube.com/shorts/{{ page.short }}">
+    <a href="https://www.youtube.com/shorts/{{ page.short }}" target="_blank">
         <img src="{{ site.baseurl }}/assets/external/logos/yt-mono-dark.png" style="height: 1em;" alt="youtube">
     </a>
     {% endif %}
     {% if page.tiktok %}
-    <a href="https://www.tiktok.com/@{{ page.tiktok_username }}/video/{{ page.tiktok }}">
+    <a href="https://www.tiktok.com/@{{ page.tiktok_username }}/video/{{ page.tiktok }}" target="_blank">
         <img src="{{ site.baseurl }}/assets/external/logos/tiktok-mono-dark.png" style="height: 1em;" alt="tiktok">
     </a>
     {% endif %}
     {% if page.reel %}
-    <a href="https://www.instagram.com/{{ page.instagram_username }}/reel/{{ page.reel }}/">
+    <a href="https://www.instagram.com/{{ page.instagram_username }}/reel/{{ page.reel }}/" target="_blank">
         <img src="{{ site.baseurl }}/assets/external/logos/ig-mono-dark.png" style="height: 1em;" alt="instagram">
     </a>
     {% endif %}

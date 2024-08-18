@@ -3,7 +3,11 @@ layout: site-grandeur
 ---
 
 <head>
+    {% if page.project.name %}
     <title>{{ page.project.name }}: {{ page.short_title }} | {{ site.title }}</title>
+    {% else %}
+    <title>{{ page.short_title }} | {{ site.title }}</title>
+    {% endif %}
 </head>
 
 <div class="post-header" id="content">
