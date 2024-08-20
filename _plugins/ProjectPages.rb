@@ -42,6 +42,7 @@ module Jekyll
         @name     = 'index.html' # basically @basename + @ext.
   
         project['url'] = path
+        project['id'] = category
 
         # Initialize data hash with a key pointing to all posts under current category.
         @data = {

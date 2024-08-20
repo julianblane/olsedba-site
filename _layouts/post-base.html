@@ -10,6 +10,13 @@ layout: site-grandeur
     {% endif %}
 </head>
 
+<!-- todo: move this to site-grandeur -->
+<style>
+    #nav-{{ page.project.id }} {
+        color: var(--sky-colour-bottom-facing) !important;
+    }
+</style>
+
 <div class="post-header" id="content">
     {% include breadcrumbs.html categories=page.categories tags=page.tags %}
     <div class="post-date">{{ page.date | split: ' ' | first }}</div>
