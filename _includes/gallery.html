@@ -24,7 +24,7 @@
         {% assign show_date = false %}
         {% assign show_project = false %}
       {% else %}
-        {% assign show_tags = true %}
+        {% assign show_tags = include.show_tags %}
         {% assign show_date = true %}
         {% assign show_project = include.show_project %}
       {% endif %}
