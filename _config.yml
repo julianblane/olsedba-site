@@ -22,7 +22,7 @@ title: olsedba
 email: olsedba@julianblane.com
 description: >- # this means to ignore newlines until "baseurl:"
   Finalmente un juego que transcurre en la ciudad de Cordoba.
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://olsedba.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  julianblane
 
