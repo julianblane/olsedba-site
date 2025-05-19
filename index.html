@@ -6,21 +6,14 @@ image: /assets/projects/grandeur.jpeg
     <title>{{ site.title }}</title>
 </head>
 
-{% assign devshort = site.tags.devshort | first %}
-{% assign devlog = site.tags.devlog | first %}
-{% assign artshort = site.categories.art | first %}
-{% assign olsedbartshort = site.categories.olsedba[0] %}
-{% assign olsedbartshortdos = site.categories.olsedba[1] %}
-{% assign announcement = site.tags.announcement | first %}
-{% assign socialmedia = site.tags.socialmedia | first %}
-
 {% assign posts = "" | split: ',' %}
-{% assign posts = posts | push: devshort %}
-{% assign posts = posts | push: devlog %}
-{% assign posts = posts | push: artshort %}
-{% assign posts = posts | push: olsedbartshort %}
-{% assign posts = posts | push: olsedbartshortdos %}
-{% assign posts = posts | push: announcement %}
-{% assign posts = posts | push: socialmedia %}
+{% assign posts = posts | push: site.categories.shorts[0] %}
+{% assign posts = posts | push: site.categories.shorts[1] %}
+{% assign posts = posts | push: site.categories.shorts[2] %}
+{% assign posts = posts | push: site.categories.shorts[3] %}
+{% assign posts = posts | push: site.categories.shorts[4] %}
+{% assign posts = posts | push: site.categories.shorts[5] %}
+{% assign posts = posts | push: site.categories.novedades[1] %}
+{% assign posts = posts | push: site.categories.novedades[0] %}
 
 {% include gallery.html posts=posts show_project=true show_tags=false %}

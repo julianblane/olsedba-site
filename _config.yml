@@ -18,12 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Julian Blane
-email: julian@julianblane.com
+title: olsedba
+email: olsedba@julianblane.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Proyectos, lanzamientos y contenido digital.
+  Finalmente un juego que transcurre en la ciudad de Cordoba.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://julianblane.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://olsedba.com" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  julianblane
 
 # Build settings
@@ -36,8 +36,8 @@ social:
   name: Julian Blane
   links:
     - https://www.youtube.com/@julianblane
-    - https://www.tiktok.com/@julianblane
-    - https://www.instagram.com/julianblane.dev/
+    - https://www.tiktok.com/@olsedba
+    - https://www.instagram.com/olsedba/
     - https://github.com/julianblane/
     - https://www.linkedin.com/in/julianblane
 
@@ -53,7 +53,7 @@ defaults:
       path: 
     values:
       layout: site-grandeur
-      header: JULIAN BLANE
+      header: OLSEDBA
       excerpt_separator: <!-- preview -->
 
 permalink: /:categories/:year/:month/:day/:title

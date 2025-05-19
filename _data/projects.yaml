@@ -1,15 +1,9 @@
-profundidades:
-  name: Profundidades
+shorts:
+  name: Shorts
   description: >-
-    Profundidades es un juego de realidad virtual en el cual exploras el fondo marino en busqueda de criaturas exoticas.
+    Videos cortitos que revelan un poco de lo que se trata el proyecto.
 
-olsedba:
-  name: olsedba
+novedades:
+  name: Novedades
   description: >-
-    olsedba es un juego que transcurre en la ciudad de cordoba.
-
-art:
-  name: Visuales
-  description: >-
-    Un poco de lo que hago y no encasilla en un gran proyecto.
-# TODO: title override
+    Anuncios y menciones importantes sobre el proyecto.

@@ -1,6 +1,0 @@
----
-layout: post-devlog
-short_title:  "Streams de desarrollo en Unity"
-tags: announcement
----
-Seguime en {% include link-new-tab.html text="twitch.tv/julianblane" url="https://www.twitch.tv/julianblane" %}  y segui en vivo el desarrollo de PROFUNDIDADES
