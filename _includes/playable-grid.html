@@ -1,0 +1,7 @@
+<div class="grid-container playable">
+{% for post in include.shorts %}
+    <div>
+    {% include embed-youtube.html id=post aspect="vertical" %}
+    </div>
+{% endfor %}
+</div>

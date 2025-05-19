@@ -1,10 +1,12 @@
 :root {
     --gallery-columns: 3;
+    --gallery-playable-columns: 1;
 }
 
 @media screen and (min-width: 1024px) {
     :root {
         --gallery-columns: 6;
+        --gallery-playable-columns: 2;
     }
 }
 
@@ -237,6 +239,10 @@ footer > .links > a > img {
     grid-template-columns: repeat(var(--gallery-columns), minmax(0, 1fr));
     grid-auto-rows: 1fr;
     gap: .5em;
+}
+
+.grid-container.playable {
+    grid-template-columns: repeat(var(--gallery-playable-columns), minmax(0, 1fr));
 }
 
 /* add an invisible element to enforce proportions */
