@@ -231,7 +231,11 @@ footer {
     margin: 0 0;
     text-transform: uppercase;
 
-    color: var(--font-colour) !important;
+    color: var(--font-colour);
+}
+
+.h-project {
+    color: var(--sky-colour-bottom-facing);
 }
 
 h1, h2 {
