@@ -12,7 +12,7 @@ module Jekyll
         if post.data['categories'].include?("art")
           post.data["title"] = "#{post.data['tags'].last.to_s.capitalize}: #{post.data['short_title']}"
         else
-          post.data["title"] = "#{post.data['tags'].last.to_s.capitalize} de #{project['name'] if project}: #{post.data['short_title']}"
+          post.data["title"] = "#{project['name'] if project}: #{post.data['short_title']}"
         end
 
         if post.data['tags'].include?("devshort") || post.data['tags'].include?("artshort")

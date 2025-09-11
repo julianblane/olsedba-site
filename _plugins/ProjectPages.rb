@@ -48,7 +48,7 @@ module Jekyll
         @data = {
           'project' => category,
           'short_title' => project['name'],
-          'title' => project['title'] || "#{project['name']}: updates y contenido del proyecto",
+          'title' => project['title'] || "#{project['name']}",
           'description' => project['description'],
           'posts' => posts,
           'image' => "#{site.baseurl}/assets/projects/#{category}.jpeg",
