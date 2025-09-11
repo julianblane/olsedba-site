@@ -127,7 +127,7 @@ footer > .links > a > img {
     bottom: 0;
     left: 0;
     right: 0;
-    background-image: linear-gradient(45deg, var(--sky-colour), transparent);
+    background-image: linear-gradient(60deg, var(--sky-colour), 85%, transparent);
     padding: .5em;
     cursor: pointer;
     color: var(--font-colour);
@@ -231,6 +231,12 @@ footer > .links > a > img {
 /* tiktok embed */
 .embed-tiktok {
     width: 325px !important;
+}
+
+/* instagram embed */
+.instagram-media {
+    margin: auto !important;
+    max-width: 100vh !important;
 }
 
 /* gallery */
