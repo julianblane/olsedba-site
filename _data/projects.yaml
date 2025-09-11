@@ -7,3 +7,8 @@ news:
   name: Novedades
   description: >-
     Anuncios y menciones importantes sobre el proyecto.
+
+press:
+  name: Prensa
+  description: >-
+    Articulos y menciones en la prensa.

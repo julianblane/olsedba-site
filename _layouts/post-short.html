@@ -6,6 +6,8 @@ layout: post-base
 {% include embed-youtube.html id=page.short aspect="vertical" %}
 {% elsif page.tiktok %}
 {% include embed-tiktok.html username=page.tiktok_username tiktok=page.tiktok %} 
+{% elsif page.reel %}
+{% include embed-instagram.html instagram_username=page.instagram_username reel=page.reel %} 
 {% endif %}
 
 Dale like y seguime en:
