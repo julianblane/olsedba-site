@@ -7,13 +7,9 @@
   <title>olsedba</title>
 
   <style>
-    @font-face {
-      font-family: "Zrnic";
-      src: url("/assets/fonts/zrnic-rg.otf") format("opentype");
-    }
-
     :root {
-      --bg-color: hsl(217deg 60% 72%);
+      --bg-color: hsl(0 0% 32%);
+      --content-color: hsl(217deg 60% 72%);
     }
 
     body {
@@ -23,6 +19,7 @@
       display: flex;
       overflow: hidden;
       font-family: Arial, sans-serif;
+      place-self: center;
     }
 
     .sidebar {
@@ -46,22 +43,22 @@
       display: block;
     }
 
-    .vertical-text {
-      font-family: "Zrnic", sans-serif;
-      writing-mode: vertical-rl;
-      transform: rotate(180deg);
-      color: white;
-      font-size: 32px;
-      letter-spacing: 4px;
-      line-height: 1;
+    .sidebar-logo {
+      width: 32px;
+    }
+
+    .sidebar-logo img {
+      width: 100%;
     }
 
     .content {
       font-family: "Coda";
       font-weight: bold;
+      background: var(--content-color);
       color: #FFF;
       overflow-y: auto;
       width: 100%;
+      max-width: 768px;
       box-sizing: border-box;
     }
 
@@ -89,7 +86,7 @@
       background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0) 0%,
-        var(--bg-color) 100%
+        var(--content-color) 100%
       );
     }
 
@@ -106,6 +103,16 @@
       line-height: 1.7;
       margin-top: 0;
       margin-bottom: 32px;
+    }
+
+    .content-back {
+      display: none;
+    }
+
+    @media (min-width: 769px) {
+      .content-back {
+        display: block;
+      }
     }
 
     .icon-row {
@@ -130,16 +137,26 @@
 </head>
 
 <body>
+  <!-- TODO: left panel showing screenshots -->
+  <!-- <div class="content content-back">
+
+  </div> -->
+
   <div class="sidebar">
 
     <div class="logo-top">
       <img
         src="/assets/logos/julianblane-pal-logo.png"
-        alt="PlayStation Logo"
+        alt="Julian Blane Icon"
       />
     </div>
 
-    <div class="vertical-text">Olsedba</div>
+    <div class="sidebar-logo">
+      <img
+        src="/assets/logos/olsedba-title.png"
+        alt="Olsedba Title"
+      />
+    </div>
 
     <div class="logo-bottom">
       <img
