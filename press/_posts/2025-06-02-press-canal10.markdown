@@ -1,7 +1,0 @@
----
-layout: post-short
-short_title:  "El juego retro de cordoba"
-tags: artshort
-instagram_username: canal10cba
-reel: DKXMg3WuPei
----
