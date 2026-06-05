@@ -134,6 +134,34 @@
       color: white;
     }
   </style>
+
+  
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const currentParams = new URLSearchParams(window.location.search);
+
+      const allowed = [
+          "utm_source",
+          "utm_medium",
+          "utm_campaign",
+          "utm_content",
+          "utm_term"
+      ];
+
+      document.querySelectorAll("a.link-patreon").forEach(link => {
+          const url = new URL(link.href);
+
+          for (const key of allowed) {
+              const value = currentParams.get(key);
+              if (value) {
+                  url.searchParams.set(key, value);
+              }
+          }
+
+          link.href = url.toString();
+      });
+  });
+  </script>
 </head>
 
 <body>
@@ -205,11 +233,11 @@
 
       <p>
         ¿No tenes ganas de esperar?
-        Suscribite a mi <a href="https://www.patreon.com/julianblane" target="_blank">Patreon y conseguí acceso anticipado</a>.
+        Suscribite a mi <a class="link-patreon" href="https://www.patreon.com/julianblane" target="_blank">Patreon y conseguí acceso anticipado</a>.
       </p>
 
       <div class="icon-row">
-        <a href="https://www.patreon.com/julianblane" target="_blank">
+        <a class="link-patreon" href="https://www.patreon.com/julianblane" target="_blank">
           <img
             src="/assets/logos/patreon-banner.png"
             alt="Icon 1"
