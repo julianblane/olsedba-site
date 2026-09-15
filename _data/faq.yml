@@ -1,0 +1,37 @@
+- question: "¿Qué es OLSEDBA?"
+  open: true
+  answer: |
+    OLSEDBA es el primer videojuego que transcurre en la ciudad de Córdoba, Argentina.
+
+- question: "¿Qué podés hacer en OLSEDBA?"
+  open: true
+  answer: |
+    Podés recorrer la ciudad, y visitar puntos reconocidos como el Paseo Sobremonte, el Buen Pastor, la plaza San Martín y el Patio Olmos, así como toda la Cañada.
+    Jugás misiones para juntar plata y poder personalizar tu personaje; salís a repartir pedidos, preparar tragos o hacer changas por ahí.
+
+- question: "¿Qué barrios podés recorrer?"
+  answer: |
+    Actualmente está disponible el Centro, Nueva Córdoba, Parque Sarmiento y Alberdi.
+    Hay planes de expandir para incluir Güemes y Ciudad Universitaria.
+
+- question: "¿OLSEDBA es gratis?"
+  answer: |
+    Sí. Es un juego gratuito. Sin microtransacciones ni pagos adicionales.
+
+- question: "¿Es un juego para PC o para celular?"
+  answer: |
+    Es un juego para celulares. Por el momento disponible para Android, en un futuro para iOS también.
+
+- question: "Quiero ser tester, ¿dónde lo descargo?"
+  answer: |
+    Actualmente está en período de prueba. Para ser tester tenés que [sumate a mi Patreon](https://www.patreon.com/julianblane), donde vas a tener acceso a descargar la versión más nueva.
+
+- question: "¿Cómo puedo contribuir al proyecto?"
+  answer: |
+    Seguime en las redes y contale a tus amigos sobre el juego. 
+    [Sumate al Patreon](https://www.patreon.com/julianblane) y mantenete al día con cada actualización.
+
+- question: "¿Podés agregar..."
+  answer: |
+    ...el Montserrat? ...la Plaza España? ...el Parque Sarmiento? ...mi departamento? ...la casa de mi abuela?
+    Sí. Pero haceme acordar dejándome un comentario en las redes. Los lugares más pedidos tienen prioridad.
