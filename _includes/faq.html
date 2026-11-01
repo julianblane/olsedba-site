@@ -2,7 +2,7 @@
   <h2 id="faq-title">Preguntas Frecuentes</h2>
 
   <div class="faq-list">
-      {% for item in site.data.faq %}
+      {% for item in include.faq %}
         <details class="faq-item" {% if item.open %}open{% endif %}>
           <summary class="faq-question">{{ item.question }}</summary>
             <div class="faq-answer">
@@ -18,7 +18,7 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-      {% for item in site.data.faq %}
+      {% for item in include.faq %}
       {
           "@type": "Question",
           "name": {{ item.question | jsonify }},

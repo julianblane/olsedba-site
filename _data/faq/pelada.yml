@@ -1,0 +1,13 @@
+- question: "¿De qué trata el juego de la Pelada de la Cañada?"
+  open: true
+  answer: |
+    Es un juego de terror en el que tenés que sobrevivir siendo acechado por la criatura de la leyenda urbana.
+
+- question: "¿Dónde transcurre el juego?"
+  open: true
+  answer: |
+    Al ser fiel a la leyenda de la Pelada de la Cañada, transcurre en el barrio Güemes de la ciudad de Córdoba, Argentina.
+
+- question: "¿Lo puedo jugar ahora?"
+  answer: |
+    Todavía estamos en fase de pruebas. Apenas esté disponible la demo, la vas a poder jugar.
