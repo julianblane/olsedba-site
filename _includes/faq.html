@@ -3,12 +3,14 @@
 
   <div class="faq-list">
       {% for item in include.faq %}
-        <details class="faq-item" {% if item.open %}open{% endif %}>
-          <summary class="faq-question">{{ item.question }}</summary>
-            <div class="faq-answer">
-            <p>{{ item.answer | markdownify | newline_to_br }}</p>
-          </div>
-        </details>
+        {% unless item.hidden %}
+          <details class="faq-item" {% if item.open %}open{% endif %}>
+            <summary class="faq-question">{{ item.question }}</summary>
+              <div class="faq-answer">
+              <p>{{ item.answer | markdownify | newline_to_br }}</p>
+            </div>
+          </details>
+        {% endunless %}
       {% endfor %}
   </div>
 </section>

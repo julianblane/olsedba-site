@@ -6,8 +6,17 @@
 - question: "¿Dónde transcurre el juego?"
   open: true
   answer: |
-    Al ser fiel a la leyenda de la Pelada de la Cañada, transcurre en el barrio Güemes de la ciudad de Córdoba, Argentina.
+    Siendo fiel a la leyenda de la Pelada de la Cañada, transcurre en el barrio Güemes de la ciudad de Córdoba, Argentina.
 
-- question: "¿Lo puedo jugar ahora?"
+- question: "¿Lo puedo jugar AHORA?"
   answer: |
-    Todavía estamos en fase de pruebas. Apenas esté disponible la demo, la vas a poder jugar.
+    Todavía estamos en fase de pruebas. Aún no está disponible la demo, pero cuando este lista, vas a poder jugarla GRATIS.
+
+- question: "¿Quien es el desarrollador?"
+  answer: |
+    El desarrollo es una colaboracion entre @olsedba y [@stigilism](https://www.instagram.com/stigilism/).
+
+- question: "¿Es el mismo juego que hizo Chars?"
+  hidden: true
+  answer: |
+    No. No debe confundirse con el juego existente de la Pelada de la Cañada. No tiene NADA que ver.

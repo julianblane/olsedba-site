@@ -4,7 +4,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Coda">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ page.title }}</title>
 
@@ -12,6 +17,7 @@
     :root {
       --bg-color: hsl(0 0% 32%);
       --content-color: hsl(217deg 60% 72%);
+      --color: #FFF;
     }
 
     body {
@@ -57,7 +63,7 @@
       font-family: "Coda";
       font-weight: bold;
       background: var(--content-color);
-      color: #FFF;
+      color: var(--color);
       overflow-x: hidden;
       overflow-y: auto;
       width: 640px;
@@ -206,7 +212,6 @@
 <body>
   <!-- TODO: left panel showing screenshots -->
   <!-- <div class="content content-back">
-
   </div> -->
 
   <div class="sidebar">
